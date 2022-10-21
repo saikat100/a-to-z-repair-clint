@@ -1,32 +1,31 @@
-import React, { useEffect, useState } from 'react';
-import toast from 'react-hot-toast';
-import SwiperCore, { Autoplay, Pagination } from 'swiper';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import spinner from '../../../images/loading.gif';
-import Testimonial from '../Testimonial/Testimonial';
-import './Testimonials.css';
-
+import React, { useEffect, useState } from "react";
+import toast from "react-hot-toast";
+import SwiperCore, { Autoplay, Pagination } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
+import spinner from "../../../images/loading.gif";
+import Testimonial from "../Testimonial/Testimonial";
+import "./Testimonials.css";
 
 SwiperCore.use([Pagination, Autoplay]);
 
 const Testimonials = () => {
-    const [testimonials, setTestimonials] = useState([]);
+	const [testimonials, setTestimonials] = useState([]);
 
-    useEffect(() => {
-        fetch('https://moto-repair-server.herokuapp.com/all-review')
-            .then(res => res.json())
-            .then(data => setTestimonials(data))
-            .catch(error => toast.error(error.message))
-    }, []);
+	useEffect(() => {
+		fetch("https://moto-repair-server.herokuapp.com/all-review")
+			.then((res) => res.json())
+			.then((data) => setTestimonials(data))
+			.catch((error) => toast.error(error.message));
+	}, []);
 
-    return (
-			<section id="reviews" className="testimonials p-md-3">
-				<div className="my-5 py-4">
-					<div className="review-title text-center">
-						<span>What Our Clients Says</span>
-						<h3>Testimonials</h3>
-					</div>
-					<div>
+	return (
+		<section id="reviews" className="testimonials p-md-3">
+			<div className="my-5 py-4">
+				<div className="review-title text-center">
+					<span>What Our Clients Says</span>
+					<h3>Testimonials</h3>
+				</div>
+				{/* <div>
 						{testimonials.length > 0 ? (
 							<Swiper
 								loop={true}
@@ -63,10 +62,10 @@ const Testimonials = () => {
 								<img className="img-fluid" src={spinner} alt="..." />
 							</div>
 						)}
-					</div>
-				</div>
-			</section>
-		);
+					</div> */}
+			</div>
+		</section>
+	);
 };
 
 export default Testimonials;

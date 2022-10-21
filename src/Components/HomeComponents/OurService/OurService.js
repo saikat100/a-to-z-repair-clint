@@ -8,6 +8,7 @@ import { Button, Card, Col } from "react-bootstrap";
 import { motion } from "framer-motion";
 import Bounce from "react-reveal/Rotate";
 import { Link } from "react-router-dom";
+import service from "../../../images/gear-icon.png";
 import spinner from "../../../images/loading.gif";
 import ServiceDetail from "../ServiceDetail/ServiceDetail";
 import "./Services.css";
@@ -37,21 +38,27 @@ const OurServices = () => {
 					>
 						<Card className="border-0 p-3 container card-container ">
 							<Bounce top cascade>
+								<img className="img-fluid" src={service} alt="service" />
 								{/* <img className="img-fluid" src={image} alt={name} /> */}
 								<Card.Body>
 									<Card.Title as="h5" className="text-info">
+										Gear Repair
 										{/* {name} */}
 									</Card.Title>
 									<Card.Text as="p" className="text-muted">
+										Gear drivetrain has the drive sprocket threaded or
+										bolted directly to the hub of the back wheel, so that the
+										pedals are directly coupled to the wheel.
 										{/* {description} */}
 									</Card.Text>
 								</Card.Body>
 								<Card.Footer className="d-flex justify-content-between align-items-center border-0">
+									<h5>$ 1000</h5>
 									{/* <h5>৳ {price}</h5> */}
 									<Button
 										variant="info"
-										as={Link}
-										to="/dashboard/book"
+										// as={Link}
+										// to="/dashboard/book"
 										// onClick={() => setSelectedService(service)}
 										className="main-button"
 									>

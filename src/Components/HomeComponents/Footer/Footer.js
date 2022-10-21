@@ -18,11 +18,11 @@ const Footer = () => {
 								<span className="animate-border border-black mb-3"></span>
 								<Link to="/" className="d-block p-0 mb-4 item-link nav-link">
 									<FontAwesomeIcon icon={faCheckCircle} />{" "}
-									<span> Bike cleaning and washing</span>
+									<span> Ac Repair Services</span>
 								</Link>
 								<Link to="/" className="d-block p-0 mb-4 item-link nav-link">
 									<FontAwesomeIcon icon={faCheckCircle} />{" "}
-									<span> Yearly bike inspection view</span>
+									<span> Car Care Services</span>
 								</Link>
 								<Link to="/" className="d-block p-0 mb-4 item-link nav-link">
 									<FontAwesomeIcon icon={faCheckCircle} />{" "}
@@ -30,11 +30,11 @@ const Footer = () => {
 								</Link>
 								<Link to="/" className="d-block p-0 mb-4 item-link nav-link">
 									<FontAwesomeIcon icon={faCheckCircle} />{" "}
-									<span> Bike selling and buying service</span>
+									<span> Printing & Renovation</span>
 								</Link>
 								<Link to="/" className="d-block p-0 mb-4 item-link nav-link">
 									<FontAwesomeIcon icon={faCheckCircle} />{" "}
-									<span> Test driving and speed test</span>
+									<span> Electronics & Gadgets repair</span>
 								</Link>
 							</div>
 						</Col>
@@ -72,7 +72,7 @@ const Footer = () => {
 								<span className="animate-border border-black mb-3"></span>
 								<div className="footer-link">
 									<a
-										href="https://www.facebook.com/HashTagSaikat/"
+										href="/"
 										target="-blank"
 										className="d-block p-0 mb-4 item-link nav-link"
 									>
@@ -80,7 +80,7 @@ const Footer = () => {
 										<span>Facebook</span>
 									</a>
 									<a
-										href="https://www.linkedin.com/in/saikat-in/"
+										href="/"
 										target="-blank"
 										className="d-block p-0 mb-4 item-link nav-link"
 									>
@@ -88,7 +88,7 @@ const Footer = () => {
 										<span> LinkedIn</span>
 									</a>
 									<a
-										href="https://github.com/saikat100"
+										href="/"
 										target="-blank"
 										className="d-block p-0 mb-4 item-link nav-link"
 									>
@@ -96,7 +96,7 @@ const Footer = () => {
 										<span> GitHub</span>
 									</a>
 									<a
-										href="https://www.instagram.com/___saikat___/"
+										href="/"
 										target="-blank"
 										className="d-block p-0 mb-4 item-link nav-link"
 									>
@@ -104,7 +104,7 @@ const Footer = () => {
 										<span>Instagram</span>
 									</a>
 									<a
-										href="https://twitter.com/saikathossen"
+										href="/"
 										target="-blank"
 										className="d-block p-0 mb-4 item-link nav-link"
 									>
