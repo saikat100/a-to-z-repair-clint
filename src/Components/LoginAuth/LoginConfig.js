@@ -1,9 +1,9 @@
 const firebaseConfig = {
-	apiKey: "AIzaSyCu19iNsLzk2QzSqrFcVUzxZfRZ4x6JXTA",
-	authDomain: "max-bike-repair.firebaseapp.com",
-	projectId: "max-bike-repair",
-	storageBucket: "max-bike-repair.appspot.com",
-	messagingSenderId: "825240662908",
-	appId: "1:825240662908:web:6538b675f28c6a9d8daaf9",
+	apiKey: "AIzaSyCNcxEqMJa955xC-hHtRAeOlaVVexLzchk",
+	authDomain: "atoz-dcb79.firebaseapp.com",
+	projectId: "atoz-dcb79",
+	storageBucket: "atoz-dcb79.appspot.com",
+	messagingSenderId: "257716077992",
+	appId: "1:257716077992:web:cf3fde3d0d51cdcf7c499d",
 };
 export default firebaseConfig;

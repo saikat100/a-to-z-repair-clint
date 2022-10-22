@@ -62,14 +62,7 @@ const NavBar = () => {
 								<strong>Contact</strong>
 							</Nav.Link>
 							{/* <Nav.Link   as={Link} to="/dashboard/profile"  className="mr-3"><strong>Dashboard</strong></Nav.Link> */}
-							<Button
-								as={Link}
-								variant="info"
-								className="main-button"
-							>
-								Login
-							</Button>
-							{/* {isSignedIn ? (
+							{isSignedIn ? (
 								<ProfilePopper />
 							) : (
 								<Button
@@ -80,7 +73,7 @@ const NavBar = () => {
 								>
 									Login
 								</Button>
-							)} */}
+							)}
 						</Nav>
 					</Navbar.Collapse>
 				</Container>
