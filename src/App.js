@@ -27,12 +27,13 @@ function App() {
   const [isAdmin, setIsAdmin] = useState(false);
 
   useEffect(() => {
-    axios.get(`https://moto-repair-server.herokuapp.com/isAdmin?email=${loggedInUser?.email}`)
-      .then(res => {
-        setIsAdmin(res.data);
-        setAdminLoading(false);
-      })
-      .catch(error => toast.error(error.message))
+    axios
+			.get(`http://localhost:5000/isAdmin?email=${loggedInUser?.email}`)
+			.then((res) => {
+				setIsAdmin(res.data);
+				setAdminLoading(false);
+			})
+			.catch((error) => toast.error(error.message));
   }, [loggedInUser?.email]);
 
 

@@ -66,18 +66,22 @@ const StripePayment = ({ orders }) => {
             time: new Date().toDateString('dd/mm/yyyy')
         };
 
-        fetch('https://moto-repair-server.herokuapp.com/add-order', {
-            method: 'POST',
-            headers: { 'Content-Type': 'Application/json' },
-            body: JSON.stringify(bookingInfo)
-        })
-            .then(res => res.json())
-            .then(data => {
-                if (data) {
-                    toast.dismiss(loading);
-                    return swal("Successfully Ordered",  ` ${loggedInUser.name} thank you for take ${orders.name} ....!!`, "success");
-                };
-            });
+        fetch("http://localhost:5000/add-order", {
+					method: "POST",
+					headers: { "Content-Type": "Application/json" },
+					body: JSON.stringify(bookingInfo),
+				})
+					.then((res) => res.json())
+					.then((data) => {
+						if (data) {
+							toast.dismiss(loading);
+							return swal(
+								"Successfully Ordered",
+								` ${loggedInUser.name} thank you for take ${orders.name} ....!!`,
+								"success"
+							);
+						}
+					});
     };
 
     return (

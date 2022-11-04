@@ -11,7 +11,7 @@ import './AddService.css';
 const AddServices = () => {
     const { register, handleSubmit, reset } = useForm();
     const [imageURL, setImageURL] = useState(null); 
-    const [isButtonDisable, setIsButtonDisable] = useState(true);
+    const [isButtonDisable, setIsButtonDisable] = useState(false);
 
     const onSubmit =  data => {
 
@@ -24,7 +24,7 @@ const AddServices = () => {
 
         const loading = toast.loading('Adding...Please wait!');
 
-        const url='https://moto-repair-server.herokuapp.com/add-services'
+        const url = "http://localhost:5000/add-services";
         fetch(url,{
             method: 'POST',
             headers:{
@@ -36,7 +36,7 @@ const AddServices = () => {
             if(res){
                 toast.dismiss(loading);    
                 reset();
-                setIsButtonDisable(false)
+                setIsButtonDisable(true)
                 return swal(`Successfully Added!`, `${data.name} service has been successfully Added`, "success");
             }
             swal("Failed!", "Something went wrong! Please try again.", "error", { dangerMode: true });
@@ -45,7 +45,7 @@ const AddServices = () => {
 
     const handleImageUpload = event =>{
         const imageData = new FormData();
-        imageData.set('key', 'dbe52342656cdfcd177dc7e9307e81c4');
+        imageData.set("key", "393a99f764f06bff1a733165618f39e2");
         imageData.append('image', event.target.files[0])
         const loading = toast.loading('Uploading...Please wait!');
   
@@ -55,7 +55,7 @@ const AddServices = () => {
             if(response){
                 toast.success('Successfully upload Image...!!!')    
                 setImageURL(response.data.data.display_url);
-                setIsButtonDisable(true);
+                // setIsButtonDisable(true);
             }
         })
         .catch(error => toast.error(error.message));

@@ -12,7 +12,7 @@ const Testimonials = () => {
 	const [testimonials, setTestimonials] = useState([]);
 
 	useEffect(() => {
-		fetch("https://moto-repair-server.herokuapp.com/all-review")
+		fetch("http://localhost:5000/all-review")
 			.then((res) => res.json())
 			.then((data) => setTestimonials(data))
 			.catch((error) => toast.error(error.message));
@@ -25,7 +25,7 @@ const Testimonials = () => {
 					<span>What Our Clients Says</span>
 					<h3>Testimonials</h3>
 				</div>
-				{/* <div>
+				<div>
 						{testimonials.length > 0 ? (
 							<Swiper
 								loop={true}
@@ -62,7 +62,7 @@ const Testimonials = () => {
 								<img className="img-fluid" src={spinner} alt="..." />
 							</div>
 						)}
-					</div> */}
+					</div>
 			</div>
 		</section>
 	);

@@ -16,7 +16,7 @@ const ManageService = () => {
 
 	useEffect(() => {
 		axios
-			.get("https://moto-repair-server.herokuapp.com/all-services")
+			.get("http://localhost:5000/all-services")
 			.then((res) => {
 				setServices(res.data);
 			})

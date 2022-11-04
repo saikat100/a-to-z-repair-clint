@@ -61,7 +61,7 @@ const NavBar = () => {
 							<Nav.Link smooth as={HashLink} to="#contact" className="mr-3">
 								<strong>Contact</strong>
 							</Nav.Link>
-							{/* <Nav.Link   as={Link} to="/dashboard/profile"  className="mr-3"><strong>Dashboard</strong></Nav.Link> */}
+							<Nav.Link   as={Link} to="/dashboard/profile"  className="mr-3"><strong>Dashboard</strong></Nav.Link>
 							{isSignedIn ? (
 								<ProfilePopper />
 							) : (
